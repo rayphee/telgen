@@ -28,11 +28,15 @@ You can specify an input script with preformed lines by adding it as a command l
 $ ./telgen SCRIPT
 ```
 
+### Starting a Process
+
 To spawn a process, type the `SPAWN` keyword, followed by the executable's name/full path, and optionally arguments to be passed to the process:
 
 ```console
 telgen> SPAWN ls -l
 ```
+
+### Manipulating Files
 
 To perform a file operation, type the `FILE` keyword, followed by the file operation (detailed below), full file path, and optionally ASCII data to append (for `MOD` operation only). The available `FILE` operations are:
 
@@ -54,6 +58,8 @@ To perform a file operation, type the `FILE` keyword, followed by the file opera
     telgen> FILE MOD /home/user/test.txt data
     ```
 
+### Establishing a Network Connection and Sending Data
+
 To establish a network connection and send data, type the `NET` keyword, the source IP and port, followed by the destination IP address and port, and ASCII data:
 
 ```console
@@ -69,7 +75,7 @@ Each endpoint activity is referenced by its timestamp. For all endpoint activity
 - Timestamp: `timestamp`
 - Telgen command line argument: `command-line`
 - Process ID of the executable: `pid`
-- Name of the process: `process-name`
+- Name of the activity generating process: `process-name`
 - Endpoint activity type: `activity-type`
 
 For any `FILE` operation, the following additional information is logged in their respective keys:
