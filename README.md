@@ -8,6 +8,11 @@ Telemetry Generator (or `telgen` for short) is a command line utility that gener
 - `chrono` == 0.4
 - `whoami` == 1.1.1
 
+This program was also tested on the following platforms:
+
+- Linux (KDE Neon 5.21.1)
+- Mac OS (Big Sur 11.1)
+
 ## Usage
 
 To start an interactive telemetry generator session, execute the program without the input file command. By default, `telgen` will create `telemetry.log` in the working directory if it does not exist and _append_ to it if does; this can be changed via the `-l` option:
