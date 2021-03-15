@@ -1,0 +1,7 @@
+FILE NEW test.txt 
+SPAWN ls -lha
+FILE MOD test.txt data
+SPAWN less test.txt
+FILE DEL test.txt
+NET 127.0.0.1:4321 127.0.0.1:1234 data
+SPAWN ls
