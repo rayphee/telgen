@@ -18,14 +18,18 @@ This program was also tested on the following platforms:
 To start an interactive telemetry generator session, execute the program without the input file command. By default, `telgen` will create `telemetry.log` in the working directory if it does not exist and _append_ to it if does; this can be changed via the `-l` option:
 
 ```console
-$ ./telgen
+$ ./telgen -l telemetry_2.log
+Logging to telemetry_2.log
 telgen> 
+...
 ```
 
 You can specify an input script with preformed lines by adding it as a command line argument. A test script is provided as an example named `testscript`:
 
 ```console
 $ ./telgen SCRIPT
+Logging to telemetry.log
+...
 ```
 
 ### Starting a Process
