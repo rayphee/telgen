@@ -228,6 +228,8 @@ fn main() {
                        .get_matches();
 
     let logfile_path = matches.value_of("logfile").unwrap_or("telemetry.log");
+    eprintln!("Logging to {}", logfile_path);
+
     let stdin = stdin();
     let mut input = Box::new(stdin.lock()) as Box<dyn BufRead>;
 
@@ -241,7 +243,7 @@ fn main() {
         _ => {
             interactive_session = false;
             let file = match File::open(script_file.unwrap()) {
-                Err(why) => panic!("Unable to open logfile: {}", why),
+                Err(why) => panic!("Unable to open scriptfile: {}", why),
                 Ok(file) => file,
             };
             input = Box::new(BufReader::new(file));
